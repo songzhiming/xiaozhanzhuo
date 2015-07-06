@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="TitleAritcleHeadView" customModule="xiaofanzhuo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htl-4k-jXo">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="aaM-ch-36n"/>
+                    </connections>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6Ne-sA-98W">
+                    <rect key="frame" x="-19" y="-18" width="39" height="37"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="39" id="4MG-MI-DKJ"/>
+                        <constraint firstAttribute="height" constant="37" id="f4t-rx-54p"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="4MG-MI-DKJ"/>
+                            <exclude reference="f4t-rx-54p"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="4MG-MI-DKJ"/>
+                            <include reference="f4t-rx-54p"/>
+                        </mask>
+                    </variation>
+                </pageControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tei-En-Sac">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="05d-k4-Pxf">
+                            <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                        </constraint>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="05d-k4-Pxf"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="05d-k4-Pxf"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Htl-4k-jXo" secondAttribute="bottom" id="BuJ-Yi-iNV">
+                    <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                </constraint>
+                <constraint firstAttribute="centerY" secondItem="6Ne-sA-98W" secondAttribute="centerY" constant="-0.5" id="Lz9-sA-6Kh"/>
+                <constraint firstAttribute="bottom" secondItem="6Ne-sA-98W" secondAttribute="bottom" constant="381" id="S4b-Sa-ro0">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="Htl-4k-jXo" secondAttribute="trailing" id="XGu-wv-ghq"/>
+                <constraint firstItem="Htl-4k-jXo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ayj-to-se3"/>
+                <constraint firstAttribute="bottom" secondItem="tei-En-Sac" secondAttribute="bottom" constant="200" id="dt7-fL-QQd">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="tei-En-Sac" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="100" id="ghC-fq-V0I">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="centerX" secondItem="6Ne-sA-98W" secondAttribute="centerX" constant="0.5" id="iz8-HK-e8g"/>
+                <constraint firstItem="Htl-4k-jXo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pQm-BW-Nme"/>
+                <constraint firstAttribute="trailing" secondItem="tei-En-Sac" secondAttribute="trailing" constant="100" id="tZk-v8-PQC">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="Htl-4k-jXo"/>
+                    <exclude reference="6Ne-sA-98W"/>
+                    <exclude reference="tei-En-Sac"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Lz9-sA-6Kh"/>
+                    <exclude reference="S4b-Sa-ro0"/>
+                    <exclude reference="iz8-HK-e8g"/>
+                    <exclude reference="BuJ-Yi-iNV"/>
+                    <exclude reference="XGu-wv-ghq"/>
+                    <exclude reference="ayj-to-se3"/>
+                    <exclude reference="pQm-BW-Nme"/>
+                    <exclude reference="dt7-fL-QQd"/>
+                    <exclude reference="ghC-fq-V0I"/>
+                    <exclude reference="tZk-v8-PQC"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="Htl-4k-jXo"/>
+                    <include reference="6Ne-sA-98W"/>
+                    <include reference="tei-En-Sac"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Lz9-sA-6Kh"/>
+                    <include reference="S4b-Sa-ro0"/>
+                    <include reference="iz8-HK-e8g"/>
+                    <include reference="BuJ-Yi-iNV"/>
+                    <include reference="XGu-wv-ghq"/>
+                    <include reference="ayj-to-se3"/>
+                    <include reference="pQm-BW-Nme"/>
+                    <include reference="dt7-fL-QQd"/>
+                    <include reference="ghC-fq-V0I"/>
+                    <include reference="tZk-v8-PQC"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="headPageControl" destination="6Ne-sA-98W" id="7kz-pH-7FC"/>
+                <outlet property="titleHeadScrollView" destination="Htl-4k-jXo" id="hPN-oL-NQ2"/>
+            </connections>
+        </view>
+    </objects>
+</document>

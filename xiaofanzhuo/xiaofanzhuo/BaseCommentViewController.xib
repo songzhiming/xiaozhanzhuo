@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseCommentViewController" customModule="xiaofanzhuo" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="XEJ-C4-kWG" id="g9v-tP-BXh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWC-ey-cGj" userLabel="为了防止ios7下table自动下滑">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="Fdi-rM-IpZ"/>
+                        <constraint firstAttribute="width" id="bx5-ku-dEa"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Fdi-rM-IpZ"/>
+                            <exclude reference="bx5-ku-dEa"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Fdi-rM-IpZ"/>
+                            <include reference="bx5-ku-dEa"/>
+                        </mask>
+                    </variation>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XEJ-C4-kWG">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="XEJ-C4-kWG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="NCu-Vf-tkl">
+                    <variation key="heightClass=regular-widthClass=compact" constant="69"/>
+                </constraint>
+                <constraint firstItem="XWC-ey-cGj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PRW-Gi-b5o"/>
+                <constraint firstAttribute="trailing" secondItem="XEJ-C4-kWG" secondAttribute="trailing" id="VyT-6V-RaR">
+                    <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                </constraint>
+                <constraint firstItem="XWC-ey-cGj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="com-qS-acc"/>
+                <constraint firstItem="XEJ-C4-kWG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iGL-Sx-f2u">
+                    <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="XEJ-C4-kWG" secondAttribute="bottom" constant="-8" id="yxO-1W-pR5">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="XWC-ey-cGj"/>
+                    <exclude reference="XEJ-C4-kWG"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="NCu-Vf-tkl"/>
+                    <exclude reference="VyT-6V-RaR"/>
+                    <exclude reference="iGL-Sx-f2u"/>
+                    <exclude reference="yxO-1W-pR5"/>
+                    <exclude reference="PRW-Gi-b5o"/>
+                    <exclude reference="com-qS-acc"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="XWC-ey-cGj"/>
+                    <include reference="XEJ-C4-kWG"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="NCu-Vf-tkl"/>
+                    <include reference="VyT-6V-RaR"/>
+                    <include reference="iGL-Sx-f2u"/>
+                    <include reference="yxO-1W-pR5"/>
+                    <include reference="PRW-Gi-b5o"/>
+                    <include reference="com-qS-acc"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

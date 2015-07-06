@@ -1,0 +1,149 @@
+//
+//  MyMakeUpTouchViewController.swift
+//  xiaofanzhuo
+//
+//  Created by 宋志明 on 15-1-23.
+//  Copyright (c) 2015年 songzm. All rights reserved.
+//
+
+import UIKit
+
+class MyMakeUpTouchViewController: BasicViewController {
+
+    @IBOutlet weak var myLaunchMakeUpTableView: UITableView!
+    @IBOutlet weak var failView: UIView!
+    @IBOutlet weak var failLabel: UILabel!
+    
+    var taskList : NSMutableArray?
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if let pa = param as? String {//他人
+            headView.titleLabel.text = "他的组队"
+        }else{
+            headView.titleLabel.text = "我的组队"
+        }
+        taskList = NSMutableArray()
+        
+        headView.recommendButton.hidden = true
+        headView.backButton.hidden = false
+        headView.logoImage.hidden = true
+        headView.titleLabel.hidden = false
+        headView.searchButton.hidden = true
+        myLaunchMakeUpTableView.separatorColor = UIColor.clearColor()
+        myLaunchMakeUpTableView.registerNib(UINib(nibName:"MyMakeUpTouchTableViewCell", bundle:nil), forCellReuseIdentifier: "MyMakeUpTouchTableViewCell")
+        myLaunchMakeUpTableView.addFooterWithTarget(self, action:"loadMore")
+        myLaunchMakeUpTableView.tableFooterView = UIView()
+        self.getMakeUpTouchData()
+        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    //获取我发起的对对碰列表
+    func getMakeUpTouchData(){
+        var userId : String
+        if let pa = param as? String {//他人
+            userId = param as! String
+        }else{
+            userId = ApplicationContext.getUserID()!
+        }
+
+        HttpManager.sendHttpRequestPost(TASKPUBLISHED, parameters:
+            ["userId": userId,
+                "type":"publish",
+                "begin":"0",
+                "limit":"2"
+            ],
+            success: { (json) -> Void in
+                
+                FLOG("我的组队json:\(json)")
+                self.failView.hidden = true
+                //服务器数据返回成功
+                var ismore: Bool?  = json["isMore"] as? Bool
+                println("ismore::::\(ismore)")
+                if json["isMore"] as! Bool == true {
+                    self.myLaunchMakeUpTableView.footerHidden = false
+                }else{
+                    self.myLaunchMakeUpTableView.footerHidden = true
+                }
+                self.taskList = (json["taskList"])?.mutableCopy() as? NSMutableArray
+                self.myLaunchMakeUpTableView.reloadData()
+                
+                if self.taskList?.count == 0 {
+                    self.failView.hidden = false
+                    self.failLabel.text = LOAD_EMPTY
+                }
+            },
+            failure:{ (reason) -> Void in
+                if self.taskList?.count == 0 {
+                    self.failView.hidden = false
+                    self.failLabel.text = LOAD_FAILED_NO_REFRESH
+                }
+                FLOG("失败原因:\(reason)")
+        })
+    }
+    
+    
+    //加载更多
+    func loadMore(){
+        var begin = NSString(format: "%d", self.taskList!.count)
+
+        var userId : String
+        if let pa = param as? String {//他人
+            userId = param as! String
+        }else{
+            userId = ApplicationContext.getUserID()!
+        }
+        
+        HttpManager.sendHttpRequestPost(TASKPUBLISHED, parameters:
+            ["userId": userId,
+                "type":"help",
+                "begin":begin,
+                "limit":"10"
+            ],
+            success: { (json) -> Void in
+                
+                FLOG("我的组队json:\(json)")
+                //服务器数据返回成功
+                var array = json["taskList"] as? NSMutableArray
+                self.taskList?.addObjectsFromArray(array! as [AnyObject])
+                self.myLaunchMakeUpTableView.reloadData()
+                self.myLaunchMakeUpTableView.footerEndRefreshing()
+            },
+            failure:{ (reason) -> Void in
+                FLOG("失败原因:\(reason)")
+                self.myLaunchMakeUpTableView.footerEndRefreshing()
+        })
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.taskList?.count == nil {
+            return 0
+        }
+        return (self.taskList?.count)!
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var cell: MyMakeUpTouchTableViewCell = tableView.dequeueReusableCellWithIdentifier("MyMakeUpTouchTableViewCell") as! MyMakeUpTouchTableViewCell
+        var dataDic = taskList?.objectAtIndex(indexPath.row) as? NSDictionary
+        cell.loadData(dataDic)
+        return cell
+    }
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60
+        
+    }
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        var detailMakeUpTouchViewController = DetailMakeUpTouchViewController(nibName: "DetailMakeUpTouchViewController", bundle: nil, param: taskList?.objectAtIndex(indexPath.row) )
+        self.navigationController?.pushViewController(detailMakeUpTouchViewController, animated: true)
+        tableView.deselectRowAtIndexPath(indexPath , animated: true)
+    }
+
+}

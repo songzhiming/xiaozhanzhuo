@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C2043" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZoomViewController" customModule="xiaofanzhuo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zoomCollectionView" destination="oPi-yS-haw" id="d6t-1a-ehR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="oPi-yS-haw">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="IzT-EI-xDm">
+                        <size key="itemSize" width="50" height="58"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="kFL-wL-buS"/>
+                        <outlet property="delegate" destination="-1" id="YOI-jL-WoN"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="oPi-yS-haw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="023-i4-cBx"/>
+                <constraint firstAttribute="trailing" secondItem="oPi-yS-haw" secondAttribute="trailing" id="8h4-P1-QIx"/>
+                <constraint firstAttribute="bottom" secondItem="oPi-yS-haw" secondAttribute="bottom" id="Iyv-wR-emf"/>
+                <constraint firstItem="oPi-yS-haw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uCY-DN-g8G"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="oPi-yS-haw"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="023-i4-cBx"/>
+                    <exclude reference="8h4-P1-QIx"/>
+                    <exclude reference="Iyv-wR-emf"/>
+                    <exclude reference="uCY-DN-g8G"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="oPi-yS-haw"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="023-i4-cBx"/>
+                    <include reference="8h4-P1-QIx"/>
+                    <include reference="Iyv-wR-emf"/>
+                    <include reference="uCY-DN-g8G"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

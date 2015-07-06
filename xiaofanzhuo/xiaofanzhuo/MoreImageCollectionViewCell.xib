@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MoreImageCollectionViewCell" id="gTV-IL-0wX" customClass="MoreImageCollectionViewCell" customModule="xiaofanzhuo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="272" height="156"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="272" height="156"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redCloseBtn" translatesAutoresizingMaskIntoConstraints="NO" id="EDl-9x-Nrl">
+                        <rect key="frame" x="0.0" y="7" width="272" height="149"/>
+                    </imageView>
+                    <button opaque="NO" tag="1015" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5u-Ac-gbl">
+                        <rect key="frame" x="253" y="0.0" width="20" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="gYy-H9-yBU"/>
+                            <constraint firstAttribute="width" constant="20" id="mYs-Mj-Qaa"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="redCloseBtn">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="onlickDeleteButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="DFv-TB-Ybt"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="EDl-9x-Nrl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2Qr-Uj-XOz"/>
+                <constraint firstAttribute="trailing" secondItem="EDl-9x-Nrl" secondAttribute="trailing" id="5ts-Yc-sTT"/>
+                <constraint firstItem="EDl-9x-Nrl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="7" id="IIf-5G-BEy"/>
+                <constraint firstAttribute="trailing" secondItem="u5u-Ac-gbl" secondAttribute="trailing" constant="-1" id="LbP-5G-Ia3"/>
+                <constraint firstAttribute="bottom" secondItem="EDl-9x-Nrl" secondAttribute="bottom" id="YEi-PY-FIc"/>
+                <constraint firstItem="u5u-Ac-gbl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pqe-yr-p2N"/>
+            </constraints>
+            <size key="customSize" width="272" height="156"/>
+            <connections>
+                <outlet property="moreImageView" destination="EDl-9x-Nrl" id="wCf-Kc-Te5"/>
+            </connections>
+            <point key="canvasLocation" x="251" y="207"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="redCloseBtn" width="39" height="39"/>
+    </resources>
+</document>
