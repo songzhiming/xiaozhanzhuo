@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FZLanTingHeiS-R-GB.ttf">
+            <string>FZLTHJW--GB1-0</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyCommunityViewController" customModule="xiaofanzhuo" customModuleProvider="target">
             <connections>
@@ -22,22 +27,6 @@
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzn-aC-I5P" userLabel="failView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fail_rep" translatesAutoresizingMaskIntoConstraints="NO" id="MOO-AH-BdJ">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="MOO-AH-BdJ" secondAttribute="height" multiplier="310:283" id="z3t-cn-1xI"/>
-                            </constraints>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="z3t-cn-1xI"/>
-                                </mask>
-                            </variation>
-                            <variation key="heightClass=regular-widthClass=compact">
-                                <mask key="constraints">
-                                    <include reference="z3t-cn-1xI"/>
-                                </mask>
-                            </variation>
-                        </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fail_rect" translatesAutoresizingMaskIntoConstraints="NO" id="vOK-SN-ojf">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <constraints>
@@ -65,47 +54,36 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="vOK-SN-ojf" secondAttribute="trailing" constant="42" id="0Wv-EA-uiO"/>
                         <constraint firstItem="vOK-SN-ojf" firstAttribute="leading" secondItem="hzn-aC-I5P" secondAttribute="leading" constant="42" id="3E6-8J-VEg"/>
-                        <constraint firstItem="MOO-AH-BdJ" firstAttribute="leading" secondItem="hzn-aC-I5P" secondAttribute="leading" id="6g4-C3-Zf5"/>
                         <constraint firstItem="Uh4-NE-3UI" firstAttribute="centerY" secondItem="vOK-SN-ojf" secondAttribute="centerY" constant="0.5" id="Omw-x1-f9I"/>
-                        <constraint firstAttribute="trailing" secondItem="MOO-AH-BdJ" secondAttribute="trailing" id="dYr-9u-ijP"/>
                         <constraint firstItem="Uh4-NE-3UI" firstAttribute="centerX" secondItem="vOK-SN-ojf" secondAttribute="centerX" id="eOp-2D-Ye2"/>
                         <constraint firstAttribute="centerY" secondItem="vOK-SN-ojf" secondAttribute="centerY" constant="142" id="gpe-YX-MIO">
                             <variation key="heightClass=regular-widthClass=compact" constant="49"/>
                         </constraint>
-                        <constraint firstAttribute="bottom" secondItem="MOO-AH-BdJ" secondAttribute="bottom" id="mvU-0c-0SH"/>
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
-                            <exclude reference="MOO-AH-BdJ"/>
                             <exclude reference="vOK-SN-ojf"/>
                             <exclude reference="Uh4-NE-3UI"/>
                         </mask>
                         <mask key="constraints">
+                            <exclude reference="Omw-x1-f9I"/>
+                            <exclude reference="eOp-2D-Ye2"/>
                             <exclude reference="0Wv-EA-uiO"/>
                             <exclude reference="3E6-8J-VEg"/>
                             <exclude reference="gpe-YX-MIO"/>
-                            <exclude reference="Omw-x1-f9I"/>
-                            <exclude reference="eOp-2D-Ye2"/>
-                            <exclude reference="6g4-C3-Zf5"/>
-                            <exclude reference="dYr-9u-ijP"/>
-                            <exclude reference="mvU-0c-0SH"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="subviews">
-                            <include reference="MOO-AH-BdJ"/>
                             <include reference="vOK-SN-ojf"/>
                             <include reference="Uh4-NE-3UI"/>
                         </mask>
                         <mask key="constraints">
+                            <include reference="Omw-x1-f9I"/>
+                            <include reference="eOp-2D-Ye2"/>
                             <include reference="0Wv-EA-uiO"/>
                             <include reference="3E6-8J-VEg"/>
                             <include reference="gpe-YX-MIO"/>
-                            <include reference="Omw-x1-f9I"/>
-                            <include reference="eOp-2D-Ye2"/>
-                            <include reference="6g4-C3-Zf5"/>
-                            <include reference="dYr-9u-ijP"/>
-                            <include reference="mvU-0c-0SH"/>
                         </mask>
                     </variation>
                 </view>
@@ -153,14 +131,14 @@
                     <exclude reference="nIu-O6-n1m"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="QVC-hn-0VW"/>
-                    <exclude reference="Vjd-Eg-WXj"/>
-                    <exclude reference="hTR-Yf-ICs"/>
-                    <exclude reference="ldR-Qa-faG"/>
                     <exclude reference="5aY-7y-IZU"/>
                     <exclude reference="UHV-9q-84F"/>
                     <exclude reference="igl-1Q-XzJ"/>
                     <exclude reference="yB6-yk-657"/>
+                    <exclude reference="QVC-hn-0VW"/>
+                    <exclude reference="Vjd-Eg-WXj"/>
+                    <exclude reference="hTR-Yf-ICs"/>
+                    <exclude reference="ldR-Qa-faG"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -169,20 +147,19 @@
                     <include reference="nIu-O6-n1m"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="QVC-hn-0VW"/>
-                    <include reference="Vjd-Eg-WXj"/>
-                    <include reference="hTR-Yf-ICs"/>
-                    <include reference="ldR-Qa-faG"/>
                     <include reference="5aY-7y-IZU"/>
                     <include reference="UHV-9q-84F"/>
                     <include reference="igl-1Q-XzJ"/>
                     <include reference="yB6-yk-657"/>
+                    <include reference="QVC-hn-0VW"/>
+                    <include reference="Vjd-Eg-WXj"/>
+                    <include reference="hTR-Yf-ICs"/>
+                    <include reference="ldR-Qa-faG"/>
                 </mask>
             </variation>
         </view>
     </objects>
     <resources>
         <image name="fail_rect" width="452" height="364"/>
-        <image name="fail_rep" width="628" height="565"/>
     </resources>
 </document>

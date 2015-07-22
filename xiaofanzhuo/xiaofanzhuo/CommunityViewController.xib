@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
@@ -27,22 +27,6 @@
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6j-yw-V5W" userLabel="failView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fail_rep" translatesAutoresizingMaskIntoConstraints="NO" id="BaE-Tt-OI9">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="BaE-Tt-OI9" secondAttribute="height" multiplier="310:283" id="crp-Wv-ipg"/>
-                            </constraints>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="crp-Wv-ipg"/>
-                                </mask>
-                            </variation>
-                            <variation key="heightClass=regular-widthClass=compact">
-                                <mask key="constraints">
-                                    <include reference="crp-Wv-ipg"/>
-                                </mask>
-                            </variation>
-                        </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fail_rect" translatesAutoresizingMaskIntoConstraints="NO" id="N83-w0-lmR">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <constraints>
@@ -68,29 +52,22 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="BaE-Tt-OI9" firstAttribute="leading" secondItem="H6j-yw-V5W" secondAttribute="leading" id="1NT-VZ-Gde"/>
-                        <constraint firstAttribute="trailing" secondItem="BaE-Tt-OI9" secondAttribute="trailing" id="6I3-SH-dzf"/>
                         <constraint firstItem="48J-Oa-YJf" firstAttribute="centerX" secondItem="N83-w0-lmR" secondAttribute="centerX" id="BEa-dc-2rG"/>
                         <constraint firstAttribute="trailing" secondItem="N83-w0-lmR" secondAttribute="trailing" constant="42" id="QcE-Rv-upR"/>
                         <constraint firstAttribute="centerY" secondItem="N83-w0-lmR" secondAttribute="centerY" constant="110" id="eeD-oB-lPF">
                             <variation key="heightClass=regular-widthClass=compact" constant="49"/>
                         </constraint>
-                        <constraint firstAttribute="bottom" secondItem="BaE-Tt-OI9" secondAttribute="bottom" id="pK8-xS-G4M"/>
                         <constraint firstItem="N83-w0-lmR" firstAttribute="leading" secondItem="H6j-yw-V5W" secondAttribute="leading" constant="42" id="tp4-S9-Leh"/>
                         <constraint firstItem="48J-Oa-YJf" firstAttribute="centerY" secondItem="N83-w0-lmR" secondAttribute="centerY" constant="0.5" id="zAK-Ds-PQK"/>
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
-                            <exclude reference="BaE-Tt-OI9"/>
                             <exclude reference="N83-w0-lmR"/>
                             <exclude reference="48J-Oa-YJf"/>
                         </mask>
                         <mask key="constraints">
                             <exclude reference="BEa-dc-2rG"/>
                             <exclude reference="zAK-Ds-PQK"/>
-                            <exclude reference="1NT-VZ-Gde"/>
-                            <exclude reference="6I3-SH-dzf"/>
-                            <exclude reference="pK8-xS-G4M"/>
                             <exclude reference="QcE-Rv-upR"/>
                             <exclude reference="eeD-oB-lPF"/>
                             <exclude reference="tp4-S9-Leh"/>
@@ -98,16 +75,12 @@
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="subviews">
-                            <include reference="BaE-Tt-OI9"/>
                             <include reference="N83-w0-lmR"/>
                             <include reference="48J-Oa-YJf"/>
                         </mask>
                         <mask key="constraints">
                             <include reference="BEa-dc-2rG"/>
                             <include reference="zAK-Ds-PQK"/>
-                            <include reference="1NT-VZ-Gde"/>
-                            <include reference="6I3-SH-dzf"/>
-                            <include reference="pK8-xS-G4M"/>
                             <include reference="QcE-Rv-upR"/>
                             <include reference="eeD-oB-lPF"/>
                             <include reference="tp4-S9-Leh"/>
@@ -186,6 +159,5 @@
     </objects>
     <resources>
         <image name="fail_rect" width="452" height="364"/>
-        <image name="fail_rep" width="628" height="565"/>
     </resources>
 </document>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
@@ -30,22 +30,6 @@
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvv-Ci-G9D" userLabel="failView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fail_rep" translatesAutoresizingMaskIntoConstraints="NO" id="ZPi-d3-EfA">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="ZPi-d3-EfA" secondAttribute="height" multiplier="310:283" id="cnH-Rb-vfr"/>
-                            </constraints>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="cnH-Rb-vfr"/>
-                                </mask>
-                            </variation>
-                            <variation key="heightClass=regular-widthClass=compact">
-                                <mask key="constraints">
-                                    <include reference="cnH-Rb-vfr"/>
-                                </mask>
-                            </variation>
-                        </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fail_rect" translatesAutoresizingMaskIntoConstraints="NO" id="bXX-7K-9fv">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <constraints>
@@ -67,9 +51,6 @@
                             <fontDescription key="fontDescription" name="FZLTHJW--GB1-0" family="FZLanTingHeiS-R-GB" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
-                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                <rect key="frame" x="70" y="216" width="181" height="40"/>
-                            </variation>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -80,23 +61,16 @@
                         </constraint>
                         <constraint firstAttribute="trailing" secondItem="bXX-7K-9fv" secondAttribute="trailing" constant="42" id="FPj-Dn-rBv"/>
                         <constraint firstItem="3lM-S5-WqM" firstAttribute="centerX" secondItem="bXX-7K-9fv" secondAttribute="centerX" id="FXE-2N-fH6"/>
-                        <constraint firstAttribute="trailing" secondItem="ZPi-d3-EfA" secondAttribute="trailing" id="Lt3-D7-TSd"/>
-                        <constraint firstAttribute="bottom" secondItem="ZPi-d3-EfA" secondAttribute="bottom" id="NLy-Nc-Xhb"/>
                         <constraint firstItem="3lM-S5-WqM" firstAttribute="centerY" secondItem="bXX-7K-9fv" secondAttribute="centerY" constant="0.5" id="PXv-s6-odi"/>
-                        <constraint firstItem="ZPi-d3-EfA" firstAttribute="leading" secondItem="hvv-Ci-G9D" secondAttribute="leading" id="xuT-II-TJq"/>
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
-                            <exclude reference="ZPi-d3-EfA"/>
                             <exclude reference="bXX-7K-9fv"/>
                             <exclude reference="3lM-S5-WqM"/>
                         </mask>
                         <mask key="constraints">
                             <exclude reference="FXE-2N-fH6"/>
                             <exclude reference="PXv-s6-odi"/>
-                            <exclude reference="Lt3-D7-TSd"/>
-                            <exclude reference="NLy-Nc-Xhb"/>
-                            <exclude reference="xuT-II-TJq"/>
                             <exclude reference="9No-uu-QK0"/>
                             <exclude reference="Ebs-pr-KZw"/>
                             <exclude reference="FPj-Dn-rBv"/>
@@ -104,16 +78,12 @@
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="subviews">
-                            <include reference="ZPi-d3-EfA"/>
                             <include reference="bXX-7K-9fv"/>
                             <include reference="3lM-S5-WqM"/>
                         </mask>
                         <mask key="constraints">
                             <include reference="FXE-2N-fH6"/>
                             <include reference="PXv-s6-odi"/>
-                            <include reference="Lt3-D7-TSd"/>
-                            <include reference="NLy-Nc-Xhb"/>
-                            <include reference="xuT-II-TJq"/>
                             <include reference="9No-uu-QK0"/>
                             <include reference="Ebs-pr-KZw"/>
                             <include reference="FPj-Dn-rBv"/>
@@ -460,7 +430,6 @@
     </objects>
     <resources>
         <image name="fail_rect" width="452" height="364"/>
-        <image name="fail_rep" width="628" height="565"/>
         <image name="headLogo" width="175" height="50"/>
         <image name="searchViewClose" width="24" height="23"/>
     </resources>

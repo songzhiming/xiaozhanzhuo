@@ -7,34 +7,34 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>30C2B25B-36F7-4F6B-94DD-F213A8BFB11E</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>xiaofanzhuo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0C43E320B3536BA7329A90D72F90F6114FF1EED8</key>
-		<string>git.selcome.com:chenkp/xiaofanzhuoios.git</string>
+		<key>65B89C9195D20D21563B9BE0EE7719BAD909BF05</key>
+		<string>https://github.com/songzhiming/xiaozhanzhuo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>xiaofanzhuo/xiaofanzhuo.xcodeproj/project.xcworkspace</string>
+	<string>xiaofanzhuo/xiaofanzhuo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0C43E320B3536BA7329A90D72F90F6114FF1EED8</key>
+		<key>65B89C9195D20D21563B9BE0EE7719BAD909BF05</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>git.selcome.com:chenkp/xiaofanzhuoios.git</string>
+	<string>https://github.com/songzhiming/xiaozhanzhuo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0C43E320B3536BA7329A90D72F90F6114FF1EED8</string>
+	<string>65B89C9195D20D21563B9BE0EE7719BAD909BF05</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0C43E320B3536BA7329A90D72F90F6114FF1EED8</string>
+			<string>65B89C9195D20D21563B9BE0EE7719BAD909BF05</string>
 			<key>IDESourceControlWCCName</key>
-			<string>xiaofanzhuoios</string>
+			<string>xiaozhanzhuo</string>
 		</dict>
 	</array>
 </dict>

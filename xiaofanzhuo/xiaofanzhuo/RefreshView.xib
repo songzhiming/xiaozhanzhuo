@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
@@ -21,22 +21,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6y-f0-tB9" userLabel="failView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fail_rep" translatesAutoresizingMaskIntoConstraints="NO" id="Ogf-YP-HUd">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="Ogf-YP-HUd" secondAttribute="height" multiplier="310:283" id="QFg-tb-lGD"/>
-                            </constraints>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="QFg-tb-lGD"/>
-                                </mask>
-                            </variation>
-                            <variation key="heightClass=regular-widthClass=compact">
-                                <mask key="constraints">
-                                    <include reference="QFg-tb-lGD"/>
-                                </mask>
-                            </variation>
-                        </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fail_rect" translatesAutoresizingMaskIntoConstraints="NO" id="dAt-4v-n6n">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <constraints>
@@ -89,7 +73,6 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="ffz-wc-k4q" firstAttribute="centerY" secondItem="dAt-4v-n6n" secondAttribute="centerY" constant="0.5" id="337-EV-nAE"/>
-                        <constraint firstItem="Ogf-YP-HUd" firstAttribute="leading" secondItem="u6y-f0-tB9" secondAttribute="leading" id="374-2i-c2u"/>
                         <constraint firstAttribute="trailing" secondItem="dAt-4v-n6n" secondAttribute="trailing" constant="42" id="7Vt-YN-X1y"/>
                         <constraint firstItem="XrT-7B-iyK" firstAttribute="top" secondItem="ffz-wc-k4q" secondAttribute="bottom" constant="8" id="Jlu-6X-hYl"/>
                         <constraint firstItem="ffz-wc-k4q" firstAttribute="centerX" secondItem="dAt-4v-n6n" secondAttribute="centerX" id="NNT-P6-jBf"/>
@@ -99,16 +82,10 @@
                         </constraint>
                         <constraint firstItem="dAt-4v-n6n" firstAttribute="leading" secondItem="u6y-f0-tB9" secondAttribute="leading" constant="42" id="ch1-mF-8xd"/>
                         <constraint firstItem="dAt-4v-n6n" firstAttribute="leading" secondItem="u6y-f0-tB9" secondAttribute="leading" constant="42" id="fHi-tz-z60"/>
-                        <constraint firstAttribute="trailing" secondItem="Ogf-YP-HUd" secondAttribute="trailing" id="md5-lt-TaB"/>
-                        <constraint firstAttribute="bottom" secondItem="Ogf-YP-HUd" secondAttribute="bottom" id="sDA-kI-cEX"/>
-                        <constraint firstItem="Ogf-YP-HUd" firstAttribute="top" secondItem="dAt-4v-n6n" secondAttribute="bottom" constant="53" id="xJh-mW-0TW">
-                            <variation key="heightClass=regular-widthClass=compact" constant="20"/>
-                        </constraint>
                         <constraint firstAttribute="trailing" secondItem="dAt-4v-n6n" secondAttribute="trailing" constant="42" id="znm-ON-0Xq"/>
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
-                            <exclude reference="Ogf-YP-HUd"/>
                             <exclude reference="dAt-4v-n6n"/>
                             <exclude reference="ffz-wc-k4q"/>
                             <exclude reference="XrT-7B-iyK"/>
@@ -118,10 +95,6 @@
                             <exclude reference="NNT-P6-jBf"/>
                             <exclude reference="Jlu-6X-hYl"/>
                             <exclude reference="Sl0-yP-NYR"/>
-                            <exclude reference="374-2i-c2u"/>
-                            <exclude reference="md5-lt-TaB"/>
-                            <exclude reference="sDA-kI-cEX"/>
-                            <exclude reference="xJh-mW-0TW"/>
                             <exclude reference="7Vt-YN-X1y"/>
                             <exclude reference="c1d-Jx-MOJ"/>
                             <exclude reference="ch1-mF-8xd"/>
@@ -131,7 +104,6 @@
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="subviews">
-                            <include reference="Ogf-YP-HUd"/>
                             <include reference="dAt-4v-n6n"/>
                             <include reference="ffz-wc-k4q"/>
                             <include reference="XrT-7B-iyK"/>
@@ -141,10 +113,6 @@
                             <include reference="NNT-P6-jBf"/>
                             <include reference="Jlu-6X-hYl"/>
                             <include reference="Sl0-yP-NYR"/>
-                            <include reference="374-2i-c2u"/>
-                            <include reference="md5-lt-TaB"/>
-                            <include reference="sDA-kI-cEX"/>
-                            <include reference="xJh-mW-0TW"/>
                             <include reference="7Vt-YN-X1y"/>
                             <exclude reference="c1d-Jx-MOJ"/>
                             <include reference="ch1-mF-8xd"/>
@@ -200,6 +168,5 @@
     </objects>
     <resources>
         <image name="fail_rect" width="452" height="364"/>
-        <image name="fail_rep" width="628" height="565"/>
     </resources>
 </document>

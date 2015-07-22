@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
@@ -27,22 +27,6 @@
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5B-JG-yHi" userLabel="failView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fail_rep" translatesAutoresizingMaskIntoConstraints="NO" id="uzk-U9-spx">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="uzk-U9-spx" secondAttribute="height" multiplier="310:283" id="bpJ-tQ-l9G"/>
-                            </constraints>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="bpJ-tQ-l9G"/>
-                                </mask>
-                            </variation>
-                            <variation key="heightClass=regular-widthClass=compact">
-                                <mask key="constraints">
-                                    <include reference="bpJ-tQ-l9G"/>
-                                </mask>
-                            </variation>
-                        </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fail_rect" translatesAutoresizingMaskIntoConstraints="NO" id="4S3-nf-mW9">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <constraints>
@@ -71,20 +55,16 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="uzk-U9-spx" secondAttribute="trailing" id="2zj-pp-6P4"/>
                         <constraint firstAttribute="trailing" secondItem="4S3-nf-mW9" secondAttribute="trailing" constant="42" id="7Kb-B0-8DW"/>
                         <constraint firstItem="sEG-zJ-QlA" firstAttribute="centerY" secondItem="4S3-nf-mW9" secondAttribute="centerY" constant="0.5" id="9Eb-36-vFR"/>
                         <constraint firstAttribute="centerY" secondItem="4S3-nf-mW9" secondAttribute="centerY" constant="110" id="SJg-wp-Mac">
                             <variation key="heightClass=regular-widthClass=compact" constant="49"/>
                         </constraint>
-                        <constraint firstAttribute="bottom" secondItem="uzk-U9-spx" secondAttribute="bottom" id="XSF-Uh-ci8"/>
                         <constraint firstItem="sEG-zJ-QlA" firstAttribute="centerX" secondItem="4S3-nf-mW9" secondAttribute="centerX" id="ZIM-gs-E1F"/>
-                        <constraint firstItem="uzk-U9-spx" firstAttribute="leading" secondItem="p5B-JG-yHi" secondAttribute="leading" id="bBp-tB-O0N"/>
                         <constraint firstItem="4S3-nf-mW9" firstAttribute="leading" secondItem="p5B-JG-yHi" secondAttribute="leading" constant="42" id="yCN-j3-ygW"/>
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
-                            <exclude reference="uzk-U9-spx"/>
                             <exclude reference="4S3-nf-mW9"/>
                             <exclude reference="sEG-zJ-QlA"/>
                         </mask>
@@ -94,14 +74,10 @@
                             <exclude reference="7Kb-B0-8DW"/>
                             <exclude reference="SJg-wp-Mac"/>
                             <exclude reference="yCN-j3-ygW"/>
-                            <exclude reference="2zj-pp-6P4"/>
-                            <exclude reference="XSF-Uh-ci8"/>
-                            <exclude reference="bBp-tB-O0N"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="subviews">
-                            <include reference="uzk-U9-spx"/>
                             <include reference="4S3-nf-mW9"/>
                             <include reference="sEG-zJ-QlA"/>
                         </mask>
@@ -111,9 +87,6 @@
                             <include reference="7Kb-B0-8DW"/>
                             <include reference="SJg-wp-Mac"/>
                             <include reference="yCN-j3-ygW"/>
-                            <include reference="2zj-pp-6P4"/>
-                            <include reference="XSF-Uh-ci8"/>
-                            <include reference="bBp-tB-O0N"/>
                         </mask>
                     </variation>
                 </view>
@@ -188,6 +161,5 @@
     </objects>
     <resources>
         <image name="fail_rect" width="452" height="364"/>
-        <image name="fail_rep" width="628" height="565"/>
     </resources>
 </document>
